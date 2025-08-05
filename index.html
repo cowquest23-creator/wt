@@ -49,37 +49,20 @@
       margin-bottom: 30px;
     }
 
+    .btn-telegram {
+      display: inline-block;
+      background-color: #229ED9;
+      color: white;
+      padding: 20px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: bounce 1.8s infinite;
+      margin-top: 10px;
+    }
 
-    
-  .btn-telegram {
-  display: inline-block;
-  background-color: #229ED9;
-  color: white;
-  padding: 20px 40px; /* increased padding */
-  font-size: 20px;     /* increased font size */
-  font-weight: bold;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: bounce 1.8s infinite;
-  margin-top: 10px;
-}
-
-
-@media (max-width: 600px) {
-  .countdown {
-    font-size: 28px;
-  }
-  .countdown .box {
-    min-width: 60px;
-  }
-  .btn-telegram {
-    font-size: 18px;
-    padding: 16px 30px;  /* maintain proportion on mobile */
-  }
-}
-
-    
     .btn-telegram:hover {
       transform: scale(1.07);
       box-shadow: 0 0 25px #00bfff;
@@ -111,11 +94,12 @@
       display: flex;
       gap: 10px;
       font-weight: bold;
-      font-size: 35px;
+      font-size: 40px;
       align-items: center;
       justify-content: center;
       margin-top: 40px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      overflow-x: auto;
     }
 
     .countdown .box {
@@ -125,6 +109,7 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
       min-width: 80px;
+      flex-shrink: 0;
     }
 
     .countdown .number {
@@ -161,29 +146,30 @@
 
     @media (max-width: 600px) {
       .countdown {
-        font-size: 28px;
+        gap: 8px;
+        font-size: 26px;
+        justify-content: center;
+        flex-wrap: nowrap;
       }
       .countdown .box {
-        min-width: 60px;
+        min-width: 65px;
+        padding: 8px;
       }
       .btn-telegram {
-        font-size: 16px;
-        padding: 12px 20px;
+        font-size: 18px;
+        padding: 16px 30px;
       }
     }
   </style>
 </head>
 <body>
 
-
-
-
   <div class="container">
     <img src="Untitled design (6).png" alt="World Trader Logo" class="logo">
     
     <h2>🚀 Join the Top Players of the Industry</h2>
     <h1>Get Free Daily Forex Signals<br>From Real Market Experts</h1>
-    <p class="subheadline"> We’ve helped 15,000+ traders win consistently.</p>
+    <p class="subheadline">Just copy our trades and profit like a pro. We’ve helped 15,000+ traders win consistently.</p>
 
     <a class="btn-telegram" href="https://telegram.openinapp.co/22l0a" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" class="telegram-icon">
@@ -215,6 +201,7 @@
     <ul class="features">
       <li>📈 90%+ Accurate Buy/Sell Signals</li>
       <li>🧠 Backed by Professional Analysts & AI</li>
+      <li>💸 Absolutely Free — No Subscription Needed</li>
       <li>🚀 Works with Any Forex or Binary Broker</li>
       <li>📲 Instant Alerts via Telegram</li>
     </ul>
