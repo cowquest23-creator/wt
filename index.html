@@ -43,10 +43,12 @@
       font-size: 16px;
       border-radius: 50px;
       text-decoration: none;
-      transition: background 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: pulse 1.5s infinite;
     }
     .btn-telegram:hover {
-      background-color: #1b8cb8;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00bfff;
     }
     .telegram-icon {
       width: 24px;
@@ -64,6 +66,12 @@
       font-size: 14px;
       color: #aaa;
     }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
   </style>
 </head>
 <body>
@@ -80,7 +88,7 @@
     </a>
 
     <div class="timer">
-      ⏳ Redirecting in <span id="countdown">15</span> seconds...
+      ⏳ Redirecting in <span id="countdown">11</span> seconds...
     </div>
 
     <div class="footer">
@@ -89,7 +97,7 @@
   </div>
 
   <script>
-    let timeLeft = 15;
+    let timeLeft = 11;
     const countdown = document.getElementById("countdown");
 
     const timer = setInterval(() => {
@@ -98,7 +106,7 @@
 
       if (timeLeft <= 0) {
         clearInterval(timer);
-        window.location.href = "https://telegram.openinapp.co/22l0a"; // Redirect after 15 seconds
+        window.location.href = "https://telegram.openinapp.co/22l0a";
       }
     }, 1000);
   </script>
