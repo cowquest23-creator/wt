@@ -2,75 +2,157 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>World Trader - Forex Signals</title>
+  <title>Join Free Forex Signals - World Trader</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       margin: 0;
       padding: 0;
       background: linear-gradient(to bottom right, #0f172a, #1e293b);
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       color: #fff;
       text-align: center;
     }
+
     .container {
       padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
     }
+
     .logo {
-      width: 180px;
+      width: 160px;
       height: auto;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       border-radius: 50%;
       box-shadow: 0 0 20px rgba(255,255,255,0.4);
     }
+
     h2 {
-      font-size: 18px;
-      color: #ccc;
+      font-size: 22px;
+      color: #ffc107;
       margin-bottom: 10px;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+
     h1 {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: bold;
-      margin-bottom: 40px;
+      margin-bottom: 15px;
+      line-height: 1.3;
     }
+
+    .subheadline {
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
     .btn-telegram {
       display: inline-block;
       background-color: #229ED9;
       color: white;
       padding: 15px 30px;
-      font-size: 16px;
+      font-size: 18px;
+      font-weight: bold;
       border-radius: 50px;
       text-decoration: none;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: pulse 1.5s infinite;
+      animation: bounce 1.8s infinite;
+      margin-top: 10px;
     }
+
     .btn-telegram:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px #00bfff;
+      transform: scale(1.07);
+      box-shadow: 0 0 25px #00bfff;
     }
+
     .telegram-icon {
       width: 24px;
       vertical-align: middle;
       margin-right: 10px;
     }
-    .timer {
-      margin-top: 20px;
-      font-size: 18px;
-      color: #ffffff;
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .badge {
+      background-color: #00b894;
+      color: #fff;
+      display: inline-block;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin: 20px auto;
+    }
+
+    /* Countdown Timer */
+    .countdown {
+      display: flex;
+      gap: 10px;
+      font-weight: bold;
+      font-size: 40px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .countdown .box {
+      text-align: center;
+      padding: 10px 15px;
+      background: #16213e;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+      min-width: 80px;
+    }
+
+    .countdown .number {
+      font-size: 36px;
       font-weight: bold;
     }
+
+    .countdown .label {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 5px;
+      display: block;
+    }
+
+    .features {
+      margin-top: 40px;
+      text-align: left;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .features li {
+      margin: 10px 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
     .footer {
       margin-top: 50px;
       font-size: 14px;
       color: #aaa;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.08); }
-      100% { transform: scale(1); }
+    @media (max-width: 600px) {
+      .countdown {
+        font-size: 28px;
+      }
+      .countdown .box {
+        min-width: 60px;
+      }
+      .btn-telegram {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
     }
   </style>
 </head>
@@ -80,35 +162,81 @@
     <img src="Untitled design (6).png" alt="World Trader Logo" class="logo">
     
     <h2>🚀 Join the Top Players of the Industry</h2>
-    <h1>High Quality Trading Results<br>Free of Cost ✨</h1>
+    <h1>Get Free Daily Forex Signals<br>From Real Market Experts</h1>
+    <p class="subheadline">No fees. No experience needed. Just copy our trades and profit like a pro. We’ve helped 15,000+ traders win consistently.</p>
 
     <a class="btn-telegram" href="https://telegram.openinapp.co/22l0a" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" class="telegram-icon">
-      Join Telegram Channel
+      Join Telegram Now
     </a>
 
-    <div class="timer">
-      ⏳ Redirecting in <span id="countdown">11</span> seconds...
+    <div class="badge">✅ Trusted by 15,000+ Active Traders</div>
+
+    <!-- Countdown Timer -->
+    <div class="countdown">
+      <div class="box">
+        <div class="number" id="days">00</div>
+        <span class="label">DAYS</span>
+      </div>
+      <div class="box">
+        <div class="number" id="hours">00</div>
+        <span class="label">HOURS</span>
+      </div>
+      <div class="box">
+        <div class="number" id="minutes">00</div>
+        <span class="label">MINUTES</span>
+      </div>
+      <div class="box">
+        <div class="number" id="seconds">11</div>
+        <span class="label">SECONDS</span>
+      </div>
     </div>
+
+    <ul class="features">
+      <li>📈 90%+ Accurate Buy/Sell Signals</li>
+      <li>🧠 Backed by Professional Analysts & AI</li>
+      <li>🚀 Works with Any Forex or Binary Broker</li>
+      <li>📲 Instant Alerts via Telegram</li>
+    </ul>
 
     <div class="footer">
       © 2025 World Trader | All Rights Reserved
     </div>
   </div>
 
+  <!-- Countdown Script -->
   <script>
-    let timeLeft = 11;
-    const countdown = document.getElementById("countdown");
+    let totalSeconds = 11;
+    const daysSpan = document.getElementById('days');
+    const hoursSpan = document.getElementById('hours');
+    const minutesSpan = document.getElementById('minutes');
+    const secondsSpan = document.getElementById('seconds');
 
-    const timer = setInterval(() => {
-      timeLeft--;
-      countdown.textContent = timeLeft;
+    const updateTimer = () => {
+      let seconds = totalSeconds;
 
-      if (timeLeft <= 0) {
-        clearInterval(timer);
+      const days = Math.floor(seconds / (60 * 60 * 24));
+      seconds %= (60 * 60 * 24);
+      const hours = Math.floor(seconds / 3600);
+      seconds %= 3600;
+      const minutes = Math.floor(seconds / 60);
+      seconds %= 60;
+
+      daysSpan.textContent = String(days).padStart(2, '0');
+      hoursSpan.textContent = String(hours).padStart(2, '0');
+      minutesSpan.textContent = String(minutes).padStart(2, '0');
+      secondsSpan.textContent = String(seconds).padStart(2, '0');
+
+      if (totalSeconds === 0) {
+        clearInterval(timerInterval);
         window.location.href = "https://telegram.openinapp.co/22l0a";
       }
-    }, 1000);
+
+      totalSeconds--;
+    };
+
+    updateTimer();
+    const timerInterval = setInterval(updateTimer, 1000);
   </script>
 
 </body>
